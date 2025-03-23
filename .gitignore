@@ -1,33 +1,22 @@
-# 🔒 Sensitive & Unnecessary Files
-*.key
-*.crt
-*.pem
-*.p12
+# Logs
 *.log
-*.pcap
-*.json
-*.bak
-*.zip
-*.gz
-*.tar
 
-# 📦 Service & System Noise
-.env
-*.service
-*.yml~
-__pycache__/
-*.pyc
+# System junk
 *.swp
-
-# 🧪 Debug / Test Artifacts
-test/
-tmp/
-*.test.*
-
-# 📁 Editor & OS Files
-.vscode/
-*.DS_Store
+*.bak
+*.tmp
+.DS_Store
 Thumbs.db
 
-# 💣 Localhost-only creds
-elastic_creds.txt
+# Certs (optional: comment out if keeping for demo)
+certs/
+*.key
+*.crt
+
+# Editor config
+.vscode/
+.idea/
+
+# OS junk
+*.lock
+*.pid
