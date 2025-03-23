@@ -1,0 +1,33 @@
+# 🔒 Sensitive & Unnecessary Files
+*.key
+*.crt
+*.pem
+*.p12
+*.log
+*.pcap
+*.json
+*.bak
+*.zip
+*.gz
+*.tar
+
+# 📦 Service & System Noise
+.env
+*.service
+*.yml~
+__pycache__/
+*.pyc
+*.swp
+
+# 🧪 Debug / Test Artifacts
+test/
+tmp/
+*.test.*
+
+# 📁 Editor & OS Files
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# 💣 Localhost-only creds
+elastic_creds.txt
