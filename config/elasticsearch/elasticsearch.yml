@@ -1,0 +1,27 @@
+# ================== Elasticsearch Configuration ==================
+
+# Bind Elasticsearch to localhost for security (prevents external access)
+network.host: "127.0.0.1"
+
+# ---------------------- Security & Authentication ----------------------
+
+# Enable security features (Required for authentication)
+xpack.security.enabled: true
+xpack.security.authc.api_key.enabled: true
+
+# ---------------------- HTTP API SSL (Required for Kibana) ----------------------
+
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.key: "/opt/elasticsearch-8.17.3/config/certs/elasticsearch/elasticsearch.key"
+xpack.security.http.ssl.certificate: "/opt/elasticsearch-8.17.3/config/certs/elasticsearch/elasticsearch.crt"
+xpack.security.http.ssl.certificate_authorities: ["/opt/elasticsearch-8.17.3/config/certs/http_ca.crt"]
+xpack.security.http.ssl.verification_mode: certificate  # Enforces valid SSL handshake
+
+# ---------------------- Transport Layer Security (Node Communication) ----------------------
+
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.key: "/opt/elasticsearch-8.17.3/config/certs/elasticsearch/elasticsearch.key"
+xpack.security.transport.ssl.certificate: "/opt/elasticsearch-8.17.3/config/certs/elasticsearch/elasticsearch.crt"
+xpack.security.transport.ssl.certificate_authorities: ["/opt/elasticsearch-8.17.3/config/certs/ca/ca.crt"]
+xpack.security.transport.ssl.verification_mode: certificate  # Ensures encrypted and validated connections
+discovery.type: single-node
