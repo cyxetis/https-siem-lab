@@ -22,4 +22,11 @@ certs/
 *.pid
 
 # Sanitized config folder
-config/
+# Only ignore sensitive config contents
+config/**/*.crt
+config/**/*.key
+config/**/*.pem
+config/**/passwords.yml
+# Un-ignore sanitized configs
+!config/
+!config/**/*
