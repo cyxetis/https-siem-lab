@@ -1,0 +1,28 @@
+[Unit]
+Description=Suricata IDS/IPS daemon
+After=network.target
+
+[Service]
+User=suricata
+Group=suricata
+
+# Automatically create /run/suricata with correct perms
+RuntimeDirectory=suricata
+RuntimeDirectoryMode=0750
+
+# PID management
+PIDFile=/run/suricata/suricata.pid
+
+# Start Suricata with af-packet mode
+ExecStart=/usr/bin/suricata -c /etc/suricata/suricata.yaml --pidfile /run/suricata/suricata.pid --af-packet
+
+# Reload and restart handling
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+
+# Security hardening
+AmbientCapabilities=CAP_NET_RAW CAP_NET_ADMIN
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
