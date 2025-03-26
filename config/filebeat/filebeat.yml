@@ -7,7 +7,7 @@ filebeat.inputs:
 output.elasticsearch:
   hosts: ["https://localhost:9200"]
   username: "filebeat_internal"
-  password: "NewFilebeatPassword"
+  password: "pass"
   ssl:
     enabled: true
     certificate_authorities: ["/opt/elasticsearch-8.17.3/config/certs/http_ca.crt"]
