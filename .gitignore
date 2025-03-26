@@ -12,6 +12,7 @@ Thumbs.db
 certs/
 *.key
 *.crt
+*.pem
 
 # Editor config
 .vscode/
