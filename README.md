@@ -16,19 +16,21 @@
 
 ## ⚙️ File Structure
 
-├── elasticsearch.yml
-├── kibana.yml
-├── filebeat.yml
-├── suricata.yaml
-├── systemd/
-│ ├── elasticsearch.service
-│ ├── filebeat.service
-│ └── ...
-└── certs/
-├── ca.crt
-├── elasticsearch.crt
-└── elasticsearch.key
-
+config/
+├── elasticsearch
+│   └── README.md
+├── filebeat
+│   ├── filebeat.yml
+│   └── README.md
+├── kibana
+│   └── README.md
+├── suricata
+│   ├── README.md
+│   └── suricata.yaml
+└── systemd
+    ├── elasticsearch.service
+    ├── filebeat.service
+    └── README.md
 ---
 
 
