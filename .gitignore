@@ -20,3 +20,6 @@ certs/
 # OS junk
 *.lock
 *.pid
+
+# Sanitized config folder
+config/
